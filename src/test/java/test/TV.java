@@ -1,6 +1,6 @@
 package taller3.televisores;
 
-public class TV{
+public class TV {
     private Marca marca;
     private int canal=1;
     private int precio=500;
@@ -9,77 +9,77 @@ public class TV{
     private Control control;
     private static int numTV;
 
-    public static void setNumTV(int num){
+    public static void setNumTV(int num) {
         numTV=num;
     }
-    public static int getNumTV(){
+    public static int getNumTV() {
         retrun numTV;
     }
-    public TV (Marca mar,boolean esta){
+    public TV (Marca mar, boolean esta) {
         numTV ++;
-        marca=mar;
-        estado=esta;
+        marca = mar;
+        estado = esta;
     } 
-    public void setMarca(Marca mar){
-        marca=mar;
+    public void setMarca(Marca mar) {
+        marca = mar;
     }
-    public Marca getMarca(){
+    public Marca getMarca() {
         return marca;
     }
-    public void serControl(Control con){
-        control=con;
+    public void setControl(Control con) {
+        control = con;
     }
-    public Control getControl(){
+    public Control getControl() {
         return control;
     }
-    public void setPrecio(int pre){
-        precio=pre;
+    public void setPrecio(int pre) {
+        precio = pre;
     }
-    public int getPrecio(){
+    public int getPrecio() {
         return precio;
     }
-    public void setVolumen(int volu){
-        if (estado == true && volu>=1 && volu<=7){
-            volumen=volu;
+    public void setVolumen(int volu) {
+        if(estado == true && volu>=1 && volu<=7) {
+            volumen = volu;
         }
     }
-    public int getVolumen(){
+    public int getVolumen() {
         return volumen;
     }
-    public void setCanal(int can){
-        if (estado == true && can>=1 && can<=120){
-            canal=can;
+    public void setCanal(int can) {
+        if(estado == true && can>=1 && can<=120) {
+            canal = can;
         }
     }
-    public int getCanal(){
+    public int getCanal() {
         return canal;
     }
-    public void turnOn(){
-        estado=true;
+    public void turnOn() {
+        estado = true;
     }
-    public void turnOff(){
-        estado=false;
+    public void turnOff() {
+        estado = false;
     }
-    public boolean getEstado(){
+    public boolean getEstado() {
         return estado;
     }
-    public void volumenUp(){
-        if (estado == true && volumen>=0 && volumen<=7){
+    public void volumenUp() {
+        if(estado == true && volumen>=0 && volumen<=7) {
             volumen ++;
         }
     }
-    public void volumenDown(){
-        if (estado == true && volumen>0 && volumen<=7){
+    public void volumenDown() {
+        if(estado == true && volumen>0 && volumen<=7) {
             volumen --;
         }
     }
-    public void canalUp(){
-        if (estado == true && canal>=1 && canal<120){
+    public void canalUp() {
+        if(estado == true && canal>=1 && canal<120) {
             canal ++;
         }
     }
-    public void canalDown(){
-        if (estado == true && canal>1 && canal<=120){
+    public void canalDown() {
+        if(estado == true && canal>1 && canal<=120) {
             canal --;
         }
     }
